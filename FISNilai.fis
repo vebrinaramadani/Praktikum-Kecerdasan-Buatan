@@ -1,0 +1,48 @@
+[System]
+Name='FISNilai'
+Type='mamdani'
+Version=2.0
+NumInputs=3
+NumOutputs=1
+NumRules=3
+AndMethod='min'
+OrMethod='max'
+ImpMethod='min'
+AggMethod='max'
+DefuzzMethod='centroid'
+
+[Input1]
+Name='UTS'
+Range=[0 100]
+NumMFs=3
+MF1='buruk':'trimf',[0 0 40]
+MF2='sedang':'trimf',[30 50 70]
+MF3='baik':'trimf',[60 100 100]
+
+[Input2]
+Name='UAS'
+Range=[0 100]
+NumMFs=3
+MF1='buruk':'trimf',[0 0 40]
+MF2='sedang':'trimf',[30 50 70]
+MF3='baik':'trimf',[60 100 100]
+
+[Input3]
+Name='TUGAS'
+Range=[0 100]
+NumMFs=3
+MF1='buruk':'trimf',[0 0 40]
+MF2='sedang':'trimf',[30 50 70]
+MF3='baik':'trimf',[60 100 100]
+
+[Output1]
+Name='output1'
+Range=[0 100]
+NumMFs=2
+MF1='Tidak_lulus':'trimf',[0 0 40]
+MF2='Lulus':'trimf',[35 100 100]
+
+[Rules]
+3 3 3, 2 (1) : 1
+2 2 2, 2 (1) : 1
+1 1 1, 1 (1) : 1

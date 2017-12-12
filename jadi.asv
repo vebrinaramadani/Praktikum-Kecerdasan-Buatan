@@ -1,0 +1,84 @@
+clc
+disp('================');
+disp('Menu');
+disp('================');
+disp('1. Input Data');
+disp('2. Cetak Data');
+disp('3. Cetak Rata-Rata');
+disp('4. Cetak Dalam Bentuk Grafik');
+disp('5. Reset Data');
+disp('6. Keluar');
+n = input('Pilihan : ');
+switch (n)
+    case (1), 
+        disp(' ')
+        disp('Pilihan : 1. Input Data')
+        bulan = input('Bulan banyak bulan = ');
+        bulan; bulan
+        
+        t1=input('Pengeluaran Bulan ke 1 : ');
+        t2=input('Pengeluaran Bulan ke 2 : ');
+        t3=input('Pengeluaran Bulan ke 3 : ');
+        t4=input('Pengeluaran Bulan ke 4 : ');
+        t5=input('Pengeluaran Bulan ke 5 : ');
+               
+    case(2), 
+        disp(' ')
+        disp('Pilihan : 2. Cetak Data')
+        disp(' ')
+        disp('pengeluaran = ')
+        disp(' ')
+        disp([num2str(t1),(' '), num2str(t2),(' ') num2str(t3),(' ') num2str(t4),(' ') num2str(t5)]);
+        total_pengeluaran=(t1+t2+t3+t4+t5); total_pengeluaran
+        
+    case(3),
+        disp(' ')
+        disp('Pilihan : 3. Cetak Rata-Rata')
+        disp(' ')
+        rata=(t1+t2+t3+t4+t5)/5;
+        disp(['rata-rata pengeluaran = ' , num2str(rata)]);
+        
+        
+    case(4), 
+        disp(' ')
+        disp('Pilihan : 4. Cetak dalam bentuk Grafik')
+        disp('1. Grafik Garis');
+        disp('2. Grafik Batang');
+        disp('3. Grafik Pie');
+        grafik = input('Pilih Grafik = ');
+        switch (grafik)
+            case(1), 
+                disp('Grafik Garis')
+                a=t1;
+                b=t2;
+                c=t3;
+                d
+                plot3(a,b,c)
+                grid on
+                
+            case(2),
+                disp('Grafik Batang')
+                t=t1;t2;t3;t4;t5;
+                bar(t)
+                grid on
+                
+            case(3), 
+                disp('Grafik Pie')
+                data = [t1,t2,t3,t4,t5];
+                huruf = {'a','b','c','d','e'};
+                pie(data,huruf)
+            otherwise
+                disp ('Pilihan Tidak Ditemukan');
+                exit;
+        end
+    case(5), 
+        disp('Data sudah direset')
+        clear
+        
+    case(6),
+        disp('Keluar')
+        clc
+    otherwise
+        disp('Maaf, Pilihan Tidak Di Temukan');
+        disp(' ');
+end

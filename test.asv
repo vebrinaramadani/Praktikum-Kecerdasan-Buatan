@@ -1,0 +1,6 @@
+ hai='hallo beb';
+hai
+['Pengeluaran = ', num2str(bulann)]);
+        totbul = 0+bulann;
+        rata2 = totbul/bulan;
+        disp(['Total Pengeluaran = ', num2str(totbul)]);
